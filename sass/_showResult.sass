@@ -1,0 +1,19 @@
+/* pop up dla zakończenia gry i wyswietlenia wyniku */
+.showResult
+  display: none 
+  +sBlock()
+  letter-spacing: 3px
+  background: yellow url(../images/sup-end.png) no-repeat center
+  background-size: contain
+  animation: showResult 0.8s ease-in-out
+  & h1
+    font-family: "marvel"
+    font-size: 15vh
+    text-shadow: 0 0 6px yellow
+.timeGame 
+  font-family: "roboto"
+  font-size: 6vh
+  text-shadow: 0 0 6px yellow
+  font-weight: bold
+.showResult.offResult 
+  display: flex

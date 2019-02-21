@@ -1,0 +1,61 @@
+/* plansza na poczatek gry */
+=sBlock()
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) scale(1)
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  text-align: center
+  width: 85%
+  height: 90vh
+  padding: 5%
+  box-sizing: border-box
+
+.start 
+  display: flex
+  +sBlock()
+  background-image: url(../images/start.jpg)
+  background-position: center
+  opacity: 1
+  overflow: hidden
+  animation: enter 0.7s ease-in-out
+  & p 
+    font-family: "marvel"
+    letter-spacing: 2px
+    font-size: 10vh
+    text-shadow: 0 0 4px yellow
+  & span 
+    font-size: 5vh
+    font-weight: bold
+    text-shadow: 0 0 10px yellow
+  & button 
+    border: none
+    background-image: url(../images/batman.png)
+    background-size: cover
+    background-position: center
+    width: 19vh
+    height: 10vh
+    border-radius: 48%
+    color: yellow
+    transform: rotateY(0)
+    transition: 0.3s
+    cursor: pointer
+    outline: none
+    &:hover 
+      background-image: url(../images/batman1.png)
+      color: black
+      font-weight: bold
+    &.startGame 
+      animation: startBtn 0.6s ease-out
+/* klasa dla wyłączenia planszy z widoku*/
+.start.offStart 
+  display: none
+.start.gameOn 
+  animation: startGame 0.8s 0.6s ease-in-out
+
+@font-face 
+  font-family: "marvel"
+  src: url("../fonts/ybtfonts_marvel/Marvel-Regular.ttf")
+

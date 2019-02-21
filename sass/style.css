@@ -1,0 +1,360 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  font-family: "roboto";
+  overflow: hidden;
+}
+
+body .wrap {
+  background: black url(/images/sup-bcg.jpg) no-repeat top center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 70%;
+  -webkit-animation: color 0.8s linear;
+  animation: color 0.8s linear;
+}
+
+body .wrap .square {
+  background: transparent no-repeat center;
+  background-size: cover;
+  -ms-flex-preferred-size: 15%;
+  flex-basis: 15%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  height: 33.33%;
+  -webkit-box-shadow: 0 0 2px 4px black;
+  box-shadow: 0 0 2px 4px black;
+  -webkit-animation: color 1s linear;
+  animation: color 1s linear;
+}
+
+body .wrap.black {
+  background: black none no-repeat center;
+}
+
+.batman {
+  background: black url(images/batman.png) no-repeat center;
+  background-size: cover;
+}
+
+.superman {
+  background: black url(images/superman.png) no-repeat center;
+  background-size: cover;
+}
+
+.cap {
+  background: black url(images/cap.png) no-repeat center;
+  background-size: cover;
+}
+
+.lantern {
+  background: black url(images/lantern.png) no-repeat center;
+  background-size: cover;
+}
+
+.punisher {
+  background: black url(images/punisher.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.iron-man {
+  background: black url(images/iron-man.png) no-repeat center;
+  background-size: cover;
+}
+
+.wolverine {
+  background: black url(images/wolverine.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.deadpool {
+  background: black url(images/deadpool.png) no-repeat center;
+  background-size: cover;
+}
+
+.flash {
+  background: black url(images/flash.png) no-repeat center;
+  background-size: cover;
+}
+
+.off {
+  background-image: none;
+  background-color: transparent;
+}
+
+.hidden {
+  background-image: radial-gradient(circle, red, black, black);
+}
+
+/* plansza na poczatek gry */
+.start {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  width: 82%;
+  height: 90vh;
+  padding: 10vh;
+  background-image: url(images/start.jpg);
+  background-position: center;
+  opacity: 1;
+  overflow: hidden;
+  -webkit-animation: enter 0.7s ease-in-out;
+  animation: enter 0.7s ease-in-out;
+}
+
+.start p {
+  font-family: "marvel";
+  letter-spacing: 2px;
+  font-size: 10vh;
+}
+
+.start span {
+  font-size: 5vh;
+  font-weight: bold;
+  text-shadow: 0 0 4px yellow;
+}
+
+.start button {
+  border: none;
+  background-image: url(images/batman.png);
+  background-size: cover;
+  background-position: center;
+  width: 19vh;
+  height: 10vh;
+  border-radius: 48%;
+  color: yellow;
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: none;
+}
+
+.start button:hover {
+  background-image: url(images/batman1.png);
+  color: black;
+  font-weight: bold;
+}
+
+.start button.startGame {
+  -webkit-animation: startBtn 0.6s ease-out;
+  animation: startBtn 0.6s ease-out;
+}
+
+/* klasa dla wyłączenia planszy z widoku*/
+.start.offStart {
+  display: none;
+}
+
+.start.gameOn {
+  -webkit-animation: startGame 0.8s 0.6s ease-in-out;
+  animation: startGame 0.8s 0.6s ease-in-out;
+}
+
+@font-face {
+  font-family: "marvel";
+  src: url("./fonts/ybtfonts_marvel/Marvel-Regular.ttf");
+}
+
+@media (orientation: portrait) {
+
+  .wrap,
+  .start {
+    width: 90%;
+    height: 90vh;
+  }
+
+  .square {
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+    height: 15vh;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+
+  .wrap,
+  .start {
+    width: 90%;
+    height: 90%;
+  }
+
+  .start button {
+    width: 27vh;
+    height: 17vh;
+  }
+}
+
+@-webkit-keyframes color {
+  0% {
+    background: black none;
+  }
+
+  99% {
+    background: black none;
+  }
+}
+
+@keyframes color {
+  0% {
+    background: black none;
+  }
+
+  99% {
+    background: black none;
+  }
+}
+
+/* animacja po wejściu na strone */
+@-webkit-keyframes enter {
+  0% {
+    height: 1vh;
+    padding: 0;
+  }
+
+  40% {
+    height: 1vh;
+    padding: 0;
+  }
+
+  100% {
+    top: 50%;
+    height: 90vh;
+  }
+}
+
+@keyframes enter {
+  0% {
+    height: 1vh;
+    padding: 0;
+  }
+
+  40% {
+    height: 1vh;
+    padding: 0;
+  }
+
+  100% {
+    top: 50%;
+    height: 90vh;
+  }
+}
+
+/* animacja dla planszy po kliknięciu start */
+@-webkit-keyframes startGame {
+  10% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotateX(0);
+    transform: translate(-50%, -50%) scale(1) rotateX(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(0) rotateX(360deg);
+    transform: translate(-50%, -50%) scale(0) rotateX(360deg);
+  }
+}
+
+@keyframes startGame {
+  10% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotateX(0);
+    transform: translate(-50%, -50%) scale(1) rotateX(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(0) rotateX(360deg);
+    transform: translate(-50%, -50%) scale(0) rotateX(360deg);
+  }
+}
+
+/* aniamcja dla buttona po kliknięciu */
+@-webkit-keyframes startBtn {
+  20% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  100% {
+    -webkit-transform: rotateY(320deg);
+    transform: rotateY(320deg);
+  }
+}
+
+@keyframes startBtn {
+  20% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  100% {
+    -webkit-transform: rotateY(320deg);
+    transform: rotateY(320deg);
+  }
+}
+
+/* animacja dla pop upa na zakonczenie gry */
+@-webkit-keyframes showResult {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0) rotateX(0);
+    transform: translate(-50%, -50%) scale(0) rotateX(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotateX(360deg);
+    transform: translate(-50%, -50%) scale(1) rotateX(360deg);
+  }
+}
+
+@keyframes showResult {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0) rotateX(0);
+    transform: translate(-50%, -50%) scale(0) rotateX(0);
+  }
+
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotateX(360deg);
+    transform: translate(-50%, -50%) scale(1) rotateX(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
