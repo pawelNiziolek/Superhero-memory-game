@@ -19,7 +19,7 @@ Find the same pairs of images in the shortest possible time.
 
 ## Status
 
-Project is:_finished_
+Project is: _finished_
 
 ## Inspiration
 
