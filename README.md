@@ -3,7 +3,7 @@
 Simple memory game (html, sass, JS).
 Find the same pairs of images in the shortest possible time.
 
-## Screenshots
+## Screenshot
 
 ![Example screenshot](./images/screenshot.png)
 
