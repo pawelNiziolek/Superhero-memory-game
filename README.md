@@ -27,4 +27,4 @@ Project inspired by (https://www.youtube.com/watch?v=gKUUHjEg7mQ)
 
 ## Contact
 
-Created by Paweł Niziołek e-mail: pawel.r.niziolek@gmail.com - contact me!
+Created by Paweł Niziołek e-mail: pawel.r.niziolek@gmail.com or linkedIn: https://www.linkedin.com/in/pawel-niziolek/ - contact me!
